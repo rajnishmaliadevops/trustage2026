@@ -1,6 +1,6 @@
 rgs = {
   rg1 = {
-    name       = "rg-dev-trs-01"
+    name       = "rg-dev-trs-012222"
     location   = "East US2"
     managed_by = "Terraform"
     tags = {
