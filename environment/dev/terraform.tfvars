@@ -12,7 +12,7 @@ rgs = {
 }
 storage_accounts = {
   sa1 = {
-    name                     = "stgdevtrs01"
+    name                     = "stgdevtrs0122"
     resource_group_name      = "rg-dev-trs-012222"
     location                 = "East US2"
     account_tier             = "Standard"
