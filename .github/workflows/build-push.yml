@@ -1,0 +1,25 @@
+name: Build and Push Runner Image
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to ACR
+        uses: azure/docker-login@v1
+        with:
+          login-server: rajnishacr001.azurecr.io
+          username: rajnishacr001
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      - name: Build and push image
+        run: |
+          docker build -t rajnishacr001.azurecr.io/github-runner:latest .
+          docker push rajnishacr001.azurecr.io/github-runner:latest
