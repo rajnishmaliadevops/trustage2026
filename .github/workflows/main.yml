@@ -15,7 +15,7 @@ on:
 
 env:
   TF_VERSION: "1.12.2"
-  TF_ROOT: "./terraform"
+  TF_ROOT: "./environment/dev"
 
 permissions:
   id-token: write
@@ -41,6 +41,13 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Debug Runner
+        run: |
+          whoami
+          id
+          which az || true
+          which terraform || true
 
       - name: Azure Login OIDC
         uses: azure/login@v2
