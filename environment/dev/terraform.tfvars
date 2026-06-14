@@ -1,6 +1,6 @@
 rgs = {
   rg1 = {
-    name       = "rg-dev-trs-012222"
+    name       = "rg-dev-trs-0122221"
     location   = "East US2"
     managed_by = "Terraform"
     tags = {
@@ -13,7 +13,7 @@ rgs = {
 storage_accounts = {
   sa1 = {
     name                     = "stgdevtrs0122"
-    resource_group_name      = "rg-dev-trs-012222"
+    resource_group_name      = "rg-dev-trs-0122221"
     location                 = "East US2"
     account_tier             = "Standard"
     account_replication_type = "LRS"
