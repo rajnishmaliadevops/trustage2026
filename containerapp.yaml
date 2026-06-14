@@ -1,0 +1,22 @@
+properties:
+  configuration:
+    activeRevisionsMode: Single
+    registries:
+    - server: rajnishacr001.azurecr.io
+      username: rajnishacr001
+      passwordSecretRef: reg-pswd-bd17d13b-9017
+  template:
+    containers:
+    - name: github-runner-app
+      image: rajnishacr001.azurecr.io/github-runner:v2
+      env:
+      - name: REPOSITORY_URL
+        value: https://github.com/rajnishmaliadevops/trustage2026
+      - name: REGISTRATION_TOKEN
+        value: CE7TJN4AE6HUZFOZFO3VFW3KF3WYA
+      resources:
+        cpu: 0.5
+        memory: 1.0Gi
+    scale:
+      minReplicas: 1
+      maxReplicas: 1
